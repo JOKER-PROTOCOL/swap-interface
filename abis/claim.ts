@@ -1,0 +1,85 @@
+export const claimAbi = [
+  {
+    type: 'constructor',
+    stateMutability: 'nonpayable',
+    inputs: [{ type: 'address', name: '_token', internalType: 'address' }],
+  },
+  {
+    type: 'error',
+    name: 'OwnableInvalidOwner',
+    inputs: [{ type: 'address', name: 'owner', internalType: 'address' }],
+  },
+  {
+    type: 'error',
+    name: 'OwnableUnauthorizedAccount',
+    inputs: [{ type: 'address', name: 'account', internalType: 'address' }],
+  },
+  {
+    type: 'event',
+    name: 'OwnershipTransferred',
+    inputs: [
+      {
+        type: 'address',
+        name: 'previousOwner',
+        internalType: 'address',
+        indexed: true,
+      },
+      {
+        type: 'address',
+        name: 'newOwner',
+        internalType: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'function',
+    stateMutability: 'nonpayable',
+    outputs: [],
+    name: 'claim',
+    inputs: [],
+  },
+  {
+    type: 'function',
+    stateMutability: 'view',
+    outputs: [{ type: 'uint256', name: '', internalType: 'uint256' }],
+    name: 'claimRecord',
+    inputs: [{ type: 'address', name: '', internalType: 'address' }],
+  },
+  {
+    type: 'function',
+    stateMutability: 'view',
+    outputs: [{ type: 'address', name: '', internalType: 'address' }],
+    name: 'owner',
+    inputs: [],
+  },
+  {
+    type: 'function',
+    stateMutability: 'nonpayable',
+    outputs: [],
+    name: 'renounceOwnership',
+    inputs: [],
+  },
+  {
+    type: 'function',
+    stateMutability: 'view',
+    outputs: [{ type: 'address', name: '', internalType: 'contract ERC20' }],
+    name: 'token',
+    inputs: [],
+  },
+  {
+    type: 'function',
+    stateMutability: 'nonpayable',
+    outputs: [],
+    name: 'transferOwnership',
+    inputs: [{ type: 'address', name: 'newOwner', internalType: 'address' }],
+  },
+  {
+    type: 'function',
+    stateMutability: 'nonpayable',
+    outputs: [],
+    name: 'withdraw',
+    inputs: [],
+  },
+]
